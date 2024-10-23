@@ -5,26 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/icono.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
-    <title>Tickets - Sistemas Stadium</title>
+    <title class="titlesiste">Tickets - Sistemas Stadium</title>
 </head>
 <body>
     <header>
-        <h1>SISTEMA DE TICKETS </h1>
+        <h1>SISTEMA DE TICKETS</h1>
     </header>
 
-    <main class="">
-        <div class="">Apertura de Sucursal</div>
-        <div class="">Revisión de Equipos</div>
-        <div class="">Inventario de Insumos</div>
-        <div class="">Configuración de Red</div>
-        <div class="">Pruebas de Conectividad</div>
-        <div class="">Reportes y Actualizaciones</div>
+    <main class="container mt-4">
+        <section class="ticket-form">
+            <h2>Crear Nuevo Ticket</h2>
+            <form id="ticketForm">
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Crear Ticket</button>
+            </form>
+        </section>
+
+        <section class="ticket-list mt-4">
+            <h2>Tickets Abiertos</h2>
+            <ul id="ticketContainer" class="list-unstyled">
+                <!-- Aquí se agregarán los tickets generados -->
+            </ul>
+        </section>
     </main>
 
     <footer>
         <p>© 2024 Sistemas Stadium.</p>
         <p>Rodrigo De los Santos.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
