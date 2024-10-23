@@ -126,16 +126,14 @@ section {
 
 /* Estilo del footer */
 footer {
-	width: 100%;
-	background-color: rgba(36, 36, 36, 0.9); /* Fondo oscuro ligeramente transparente */
-	color: #fffefe;
 	text-align: center;
-	padding: 10px 0;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea superior sutil */
-}
+	padding: 10px 0; /* Ajustar el padding */
+	background-color: #333;
+	color: #f0f0f0;
+	position: relative; /* Posicionamiento relativo */
+	bottom: 0; /* Para fijar el footer en la parte inferior */
+	width: 100%; /* Ancho completo */
+	margin-top: auto; /* Espaciado automático para el footer */
 
 
 /*EMPIEZA CHECK LIST DISÑOS*/
@@ -272,6 +270,9 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
     .media-queries {
         background-color: brown;
+    }
+}
+
     }
 }
 
