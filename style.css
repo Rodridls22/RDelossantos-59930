@@ -23,7 +23,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	padding-top: 100px;
-	color: #f0f0f0; /* Texto en blanco suave */
+	color: #cc7409; /* Texto en blanco suave */
 }
 
 /* Estilo del nav */
@@ -128,7 +128,7 @@ section {
 footer {
 	width: 100%;
 	background-color: rgba(36, 36, 36, 0.9); /* Fondo oscuro ligeramente transparente */
-	color: #f0f0f0;
+	color: #fffefe;
 	text-align: center;
 	padding: 10px 0;
 	position: fixed;
@@ -182,98 +182,60 @@ footer {
 /*EMPIEZA INSUMOS DISÑOS*/
 
 /* PAGINA DE INSUMOS */
+/*EMPIEZA INSUMOS DISEÑOS*/
 
 /* Efecto sombreado en las imágenes al pasar el cursor */
 .section__grid img {
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .section__grid img:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-    transform: scale(1.05); /* Añadir también un pequeño zoom si lo deseas */
+    transform: scale(1.05); /* Zoom suave en hover */
 }
 
 /* GRILLAS DE INSUMOS */
 .section__grid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    grid-template-areas:
-        /col1/       /col2/     /col3/
-        /fila1/ "img1          img2       img3"
-        /fila2/ "img4          img5       img6"
-        /fila3/ "img7          img8       img9"
-    ;
-    column-gap: 20px;
-    row-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px;
 }
 
+/* Ajuste para las imágenes */
 .section__grid img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Ajuste para que las imágenes se adapten sin deformarse */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-.img1 {
-    grid-area: img1;
+/* Estilo para la grilla de imágenes con nombres */
+.section__grid figure {
+    text-align: center;
 }
 
-.img2 {
-    grid-area: img2;
-}
-
-.img3 {
-    grid-area: img3;
-}
-
-.img4 {
-    grid-area: img4;
-}
-
-.img5 {
-    grid-area: img5;
-}
-
-.img6 {
-    grid-area: img6;
-}
-
-.img7 {
-    grid-area: img7;
-}
-
-.img8 {
-    grid-area: img8;
-}
-
-.img9 {
-    grid-area: img9;
+.section__grid figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #495057;
 }
 
 /* Media Queries para la responsividad */
 @media (max-width: 1200px) {
     .section__grid {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 200px);
-        grid-template-areas:
-            "img1 img2"
-            "img3 img4"
-            "img5 img6"
-            "img7 img8"
-            "img9 img9"
-        ;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
     }
 }
 
 @media (max-width: 768px) {
-    header {
-        width: 100%;
-        height: auto;
+    .section__grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
     }
 
+    /* Ajustes para el layout móvil */
     nav ul {
-        height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -283,19 +245,13 @@ footer {
         margin: 5px;
     }
 
-    main {
-        padding: 10px;
-    }
-
     .imagen-con-texto {
         flex-direction: column;
-        margin-left: 0;
         align-items: center;
     }
 
     .imagen-con-texto img {
         width: 80%;
-        margin-right: 0;
     }
 
     .texto {
@@ -312,45 +268,10 @@ footer {
     }
 }
 
-/* Estilo para la grilla de imágenes con nombres */
-.section__grid figure {
-    text-align: center;
-}
-
-.section__grid figcaption {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #495057;
-}
-
-/*
-BREAKPOINTS
-
-MOVIL: 600px
-TABLET: 800px
-DESKTOP: 1200 y 1400px
-*/
-
-.media-queries {
-    width: 80%;
-    height: 400px;
-    background-color: aquamarine;
-    margin: 50px;
-}
-
-.media-queries img {
-    width: 100%;
-    height: 300px;
-}
-
-.cont-flex {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
+/* Ejemplo adicional para landscape */
 @media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
     .media-queries {
         background-color: brown;
     }
 }
+
