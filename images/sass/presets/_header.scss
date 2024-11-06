@@ -1,0 +1,38 @@
+
+nav {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(36, 36, 36, 0.9); /* Fondo del nav ligeramente transparente para ver la imagen */
+	font-size: 1.25rem;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea sutil para separación */
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			padding: 1rem 1.5rem;
+			color: #f0f0f0;
+			text-decoration: none;
+			transition: background-color 0.3s ease, color 0.3s ease;
+			border-radius: 5px;
+			a:focus {
+				background-color: #444444;
+				color: #4a90e2; /* Azul eléctrico en hover */
+			}
+		}
+	}
+	
+}
+.titulo {
+	color: #e57373; /* Color rojo suave */
+	text-align: left;
+	width: auto;
+	font-size: 1.5rem;
+	padding-left: 20px;
+}

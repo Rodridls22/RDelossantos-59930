@@ -1,0 +1,57 @@
+@import "presets/footer";
+@import "presets/reset";
+@import "presets/header";
+@import "presets/body";
+@import "presets/checkList";
+@import "presets/queries";
+@import "presets/index";
+
+
+
+
+
+
+/*EMPIEZA INSUMOS DISÑOS*/
+
+/* PAGINA DE INSUMOS */
+
+/* Efecto sombreado en las imágenes al pasar el cursor */
+.section__grid img {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.section__grid img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transform: scale(1.05); /* Zoom suave en hover */
+}
+
+/* GRILLAS DE INSUMOS */
+.section__grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px;
+}
+
+/* Ajuste para las imágenes */
+.section__grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste para que las imágenes se adapten sin deformarse */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para la grilla de imágenes con nombres */
+.section__grid figure {
+    text-align: center;
+}
+
+.section__grid figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #495057;
+}
+
+/* PAGINA DE SUCURSALES */
+
